@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image"; // Add this import statement
 import ItemLayout from "./ItemLayout";
 
 const AboutDetails = () => {
@@ -10,12 +11,11 @@ const AboutDetails = () => {
             " col-span-full lg:col-span-8 row-span-2 flex-col items-start"
           }
         >
-          <h2 className="  text-xl md:text-2xl text-left w-full capitalize">
-            Innovative Web Developer | Technology Enthusiast | Continuous
-            Learner
+          <h2 className="text-xl md:text-2xl text-left w-full capitalize">
+            Innovative Web Developer | Technology Enthusiast | Continuous Learner
           </h2>
-          <p className="font-light  text-xs sm:text-sm md:text-base   ">
-            Currently pursuing my Bachelor's in Computer Applications from
+          <p className="font-light text-xs sm:text-sm md:text-base">
+            Currently pursuing my Bachelor&apos;s in Computer Applications from
             Kurukshetra University, I have developed a strong foundation in web
             development and computer applications. My proficiency in Java was
             built through courses from Apna College, which has been instrumental
@@ -29,8 +29,8 @@ const AboutDetails = () => {
             knowledge and hands-on experience to solve real-world challenges,
             driving innovation and delivering impactful web solutions. I am
             passionate about technology, constantly seeking to push the
-            boundaries of what's possible in the web development space. I look
-            forward to contributing my expertise to forward-thinking
+            boundaries of what&apos;s possible in the web development space. I
+            look forward to contributing my expertise to forward-thinking
             organizations that value creativity, innovation, and high-quality
             results.
           </p>
@@ -53,14 +53,14 @@ const AboutDetails = () => {
           </p>
         </ItemLayout>
 
-        <ItemLayout
-          className={"col-span-full sm:col-span-6 md:col-span-4 !p-0"}
-        >
+        <ItemLayout className={"col-span-full sm:col-span-6 md:col-span-4 !p-0"}>
           <Image
             className="w-full h-auto"
             src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api/top-langs?username=Sujal-Gupta-SG&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false`}
             alt="Sujal Gupta"
             loading="lazy"
+            width={500} // Add width and height
+            height={500}
           />
         </ItemLayout>
 
@@ -70,6 +70,8 @@ const AboutDetails = () => {
             src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api?username=Sujal-Gupta-SG&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false`}
             alt="Sujal Gupta"
             loading="lazy"
+            width={500} // Add width and height
+            height={500}
           />
         </ItemLayout>
 
@@ -79,6 +81,8 @@ const AboutDetails = () => {
             src={`https://skillicons.dev/icons?i=bootstrap,cloudflare,css,figma,firebase,git,github,html,js,mongodb,mysql,netlify,nextjs,nodejs,npm,react,redux,tailwind,vite,vscode,pycharm,java,cpp,python,c,express,ejs`}
             alt="Sujal Gupta"
             loading="lazy"
+            width={500} // Add width and height
+            height={500}
           />
         </ItemLayout>
 
@@ -88,6 +92,8 @@ const AboutDetails = () => {
             src={`${process.env.NEXT_PUBLIC_GITHUB_STREAK_STATS_URL}?user=Sujal-Gupta-SG&theme=dark&hide_border=true&type=svg&background=EB545400&ring=FEFE5B&currStreakLabel=FEFE5B`}
             alt="Sujal Gupta"
             loading="lazy"
+            width={500} // Add width and height
+            height={500}
           />
         </ItemLayout>
       </div>
