@@ -18,6 +18,13 @@ const nextConfig = {
     }
     return config;
   },
+  images: {
+    domains: [
+      'github-readme-stats.vercel.app', // Add the first domain
+      'skillicons.dev',
+      'github-readme-streak-stats.herokuapp.com' // Add the second domain
+    ],
+  },
 };
 
 export default nextConfig;
