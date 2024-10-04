@@ -56,7 +56,7 @@ const AboutDetails = () => {
         <ItemLayout
           className={"col-span-full sm:col-span-6 md:col-span-4 !p-0"}
         >
-          <img
+          <Image
             className="w-full h-auto"
             src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api/top-langs?username=Sujal-Gupta-SG&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false`}
             alt="Sujal Gupta"
@@ -65,7 +65,7 @@ const AboutDetails = () => {
         </ItemLayout>
 
         <ItemLayout className={"col-span-full md:col-span-8 !p-0"}>
-          <img
+          <Image
             className="w-full h-auto"
             src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api?username=Sujal-Gupta-SG&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false`}
             alt="Sujal Gupta"
@@ -74,7 +74,7 @@ const AboutDetails = () => {
         </ItemLayout>
 
         <ItemLayout className={"col-span-full"}>
-          <img
+          <Image
             className="w-full h-auto"
             src={`https://skillicons.dev/icons?i=bootstrap,cloudflare,css,figma,firebase,git,github,html,js,mongodb,mysql,netlify,nextjs,nodejs,npm,react,redux,tailwind,vite,vscode,pycharm,java,cpp,python,c,express,ejs`}
             alt="Sujal Gupta"
@@ -83,7 +83,7 @@ const AboutDetails = () => {
         </ItemLayout>
 
         <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
-          <img
+          <Image
             className="w-full h-auto"
             src={`${process.env.NEXT_PUBLIC_GITHUB_STREAK_STATS_URL}?user=Sujal-Gupta-SG&theme=dark&hide_border=true&type=svg&background=EB545400&ring=FEFE5B&currStreakLabel=FEFE5B`}
             alt="Sujal Gupta"

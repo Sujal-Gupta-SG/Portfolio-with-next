@@ -24,14 +24,14 @@ export default function Contact() {
           </h1>
           <p className="text-center font-light text-sm xs:text-base">
             Embark on a journey through the digital cosmos where your ideas
-            transform into reality. Whether you're looking to forge new
+            transform into reality. Whether you&apos;re looking to forge new
             collaborations, unravel complex challenges, or share your own epic
             tales of development, your words hold immense power in this space.
             Utilize the form below to transmit your thoughts through the
             interconnected web of technology, and await the response that sparks
             new possibilities. Your contributions are valued scrolls in this
-            realm of creativity and innovation. Together, let’s weave the fabric
-            of the future!
+            realm of creativity and innovation. Together, let&apos;s weave the
+            fabric of the future!
           </p>
         </div>
         <Form />
