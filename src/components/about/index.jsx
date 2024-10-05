@@ -82,12 +82,30 @@ const AboutDetails = () => {
             loading="lazy"
           />
         </ItemLayout>
-
         <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
           <img
             className="w-full h-auto"
-            src={`${process.env.NEXT_PUBLIC_GITHUB_STREAK_STATS_URL}?user=Sujal-Gupta-SG&theme=dark&hide_border=true&type=svg&background=EB545400&ring=FEFE5B&currStreakLabel=FEFE5B`}
-            alt="GitHub streak stats for Sujal Gupta"
+            src={`${process.env.NEXT_PUBLIC_LEETCODE_STATS_URL}/${process.env.NEXT_PUBLIC_LEETCODE_STATS_USERNAME}?theme=transparent&ext=contest`}
+            href="https://leetcode.com/u/sujal24092004/"
+            alt="Leetcode streak stats for Sujal Gupta"
+            loading="lazy"
+          />
+        </ItemLayout>
+        <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
+          <img
+            className="w-full h-auto"
+            src={`${process.env.NEXT_PUBLIC_CODEFORCES_STATS_URL}/api/card?username=${process.env.NEXT_PUBLIC_CODEFORCES_STATS_USERNAME}&theme=transparent&border_color=transparent&disable_animations=false&show_icons=true&force_username=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FFFFFF  `}
+            href="https://codeforces.com/profile/Sujal2409"
+            alt="Codeforces streak stats for Sujal Gupta"
+            loading="lazy"
+          />
+        </ItemLayout>
+        <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
+          <img
+            className="w-full h-[500px]"
+            src={`${process.env.NEXT_PUBLIC_CODECHEF_STATS_URL}/${process.env.NEXT_PUBLIC_CODECHEF_STATS_USERNAME}`}
+            href="https://www.codechef.com/users/sujalgupta2004"
+            alt="CodeChef streak stats for Sujal Gupta"
             loading="lazy"
           />
         </ItemLayout>
