@@ -85,7 +85,7 @@ const AboutDetails = () => {
         <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
           <img
             className="w-full h-auto"
-            src={`${process.env.NEXT_PUBLIC_LEETCODE_STATS_URL}/${process.env.NEXT_PUBLIC_LEETCODE_STATS_USERNAME}?theme=transparent&ext=contest`}
+            src={`${process.env.NEXT_PUBLIC_LEETCODE_STATS_URL}/sujal24092004?theme=transparent&ext=contest`}
             href="https://leetcode.com/u/sujal24092004/"
             alt="Leetcode streak stats for Sujal Gupta"
             loading="lazy"
@@ -94,7 +94,7 @@ const AboutDetails = () => {
         <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
           <img
             className="w-full h-auto"
-            src={`${process.env.NEXT_PUBLIC_CODEFORCES_STATS_URL}/api/card?username=${process.env.NEXT_PUBLIC_CODEFORCES_STATS_USERNAME}&theme=transparent&border_color=transparent&disable_animations=false&show_icons=true&force_username=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FFFFFF  `}
+            src={`${process.env.NEXT_PUBLIC_CODEFORCES_STATS_URL}/api/card?username=Sujal2409&theme=transparent&border_color=transparent&disable_animations=false&show_icons=true&force_username=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FFFFFF  `}
             href="https://codeforces.com/profile/Sujal2409"
             alt="Codeforces streak stats for Sujal Gupta"
             loading="lazy"
@@ -103,7 +103,7 @@ const AboutDetails = () => {
         <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
           <img
             className="w-full h-[500px]"
-            src={`${process.env.NEXT_PUBLIC_CODECHEF_STATS_URL}/${process.env.NEXT_PUBLIC_CODECHEF_STATS_USERNAME}`}
+            src={`${process.env.NEXT_PUBLIC_CODECHEF_STATS_URL}/sujalgupta2004`}
             href="https://www.codechef.com/users/sujalgupta2004"
             alt="CodeChef streak stats for Sujal Gupta"
             loading="lazy"
