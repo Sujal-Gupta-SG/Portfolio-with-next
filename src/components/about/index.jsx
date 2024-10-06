@@ -91,7 +91,7 @@ const AboutDetails = () => {
             loading="lazy"
           />
         </ItemLayout>
-        <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
+        {/* <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
           <img
             className="w-full h-auto"
             src={`https://codeforces-readme-stats.vercel.app/api/card?username=Sujal2409&theme=transparent&border_color=transparent&disable_animations=false&show_icons=true&force_username=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FFFFFF  `}
@@ -108,7 +108,7 @@ const AboutDetails = () => {
             alt="CodeChef streak stats for Sujal Gupta"
             loading="lazy"
           />
-        </ItemLayout>
+        </ItemLayout> */}
       </div>
     </section>
   );
