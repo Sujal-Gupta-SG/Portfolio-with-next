@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { Toaster, toast } from "sonner";
@@ -28,9 +28,15 @@ export default function Form() {
     formState: { errors },
   } = useForm();
 
+  const [messageLength, setMessageLength] = useState(0);
+
+  const handleChange = (event) => {
+    setMessageLength(event.target.value.length);
+  };
+
   const sendEmail = (params) => {
     const toastId = toast.loading("Sending your message, please wait...");
-    
+
     emailjs
       .send(
         process.env.NEXT_PUBLIC_SERVICE_ID,
@@ -39,7 +45,7 @@ export default function Form() {
         {
           publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
           limitRate: {
-            throttle: 5000, // you can not send more then 1 email per 5 seconds
+            throttle: 5000, // you cannot send more than 1 email per 5 seconds
           },
         }
       )
@@ -53,7 +59,6 @@ export default function Form() {
           );
         },
         (error) => {
-          // console.log("FAILED...", error.text);
           toast.error(
             "There was an error sending your message, please try again later!",
             {
@@ -93,7 +98,7 @@ export default function Form() {
             required: "This field is required!",
             minLength: {
               value: 3,
-              message: "Name should be atleast 3 characters long.",
+              message: "Name should be at least 3 characters long.",
             },
           })}
           className="w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg"
@@ -129,8 +134,20 @@ export default function Form() {
               message: "Message should be more than 50 characters",
             },
           })}
+          onChange={handleChange}
           className="w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg"
         />
+
+        {/* Motion span for character count */}
+        <motion.span
+          variants={item}
+          initial="hidden"
+          animate="show"
+          className="inline-block self-start text-accent"
+        >
+          {`Your message length is: ${messageLength}`}
+        </motion.span>
+
         {errors.message && (
           <span className="inline-block self-start text-accent">
             {errors.message.message}
@@ -140,9 +157,7 @@ export default function Form() {
         <motion.input
           variants={item}
           value="Cast your message!"
-          className="px-10 py-4 rounded-md shadow-lg bg-background border border-accent/30 border-solid
-      hover:shadow-glass-sm backdrop-blur-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer capitalize
-      "
+          className="px-10 py-4 rounded-md shadow-lg bg-background border border-accent/30 border-solid hover:shadow-glass-sm backdrop-blur-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer capitalize"
           type="submit"
         />
       </motion.form>
