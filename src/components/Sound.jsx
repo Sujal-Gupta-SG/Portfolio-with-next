@@ -5,6 +5,12 @@ import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
 const Modal = ({ onClose, toggle }) => {
+  const declineMusic = () => {
+    localStorage.setItem("musicConsent", "false");
+    localStorage.setItem("consentTime", new Date().toISOString());
+    onClose();
+  };
+
   return createPortal(
     <div className="fixed inset-0 bg-background/60 backdrop-blur-sm flex items-center justify-center">
       <div
@@ -21,7 +27,7 @@ const Modal = ({ onClose, toggle }) => {
             Yes
           </button>
           <button
-            onClick={onClose}
+            onClick={declineMusic}
             className="px-4 py-2 border border-accent/30 border-solid hover:shadow-glass-sm rounded"
           >
             No
@@ -33,6 +39,7 @@ const Modal = ({ onClose, toggle }) => {
     document.getElementById("my-modal")
   );
 };
+
 
 const Sound = () => {
   const audioRef = useRef(null);
